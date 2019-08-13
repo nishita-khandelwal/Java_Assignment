@@ -1,0 +1,27 @@
+package com.zensar;
+
+public class SalesPerson extends WageEmployee{
+	private int noOfItem;
+	private int commision;
+	private int salary1;
+	
+	public SalesPerson() {
+		super();
+	}
+	public SalesPerson(int empid, String name, int d, int m, int y,int hours, int rate,int noOfItem, int commision) {
+		super(empid,name,d,m,y,hours,rate);
+		this.noOfItem = noOfItem;
+		this.commision = commision;
+	}
+	public void display()
+	{
+		super.display();
+		System.out.println("No. of item are"+noOfItem);
+		System.out.println("and commision is"+commision);
+	}
+	public double salaryWageEmp() 
+	{
+		int h;
+		return salary1=h+noOfItem*commision;
+	}
+}

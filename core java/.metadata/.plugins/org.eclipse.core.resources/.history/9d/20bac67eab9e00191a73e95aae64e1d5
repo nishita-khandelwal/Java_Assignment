@@ -1,0 +1,28 @@
+package com.zensar;
+
+import java.util.Map;
+
+public class UtilityReport {
+	private String temp;
+	private double temp1;
+	private Map<String, Double> map;
+	
+	public UtilityReport() {
+		super();
+	}
+	public UtilityReport(String temp, double temp1, Map<String, Double> map) 
+	{
+		super();
+		this.temp = temp;
+		this.temp1 = temp1;
+		this.map = map;	
+	}
+	public void showReport() 
+	{
+		for(Student student:list)
+		{
+			System.out.println(student);
+		}
+	}
+
+}

@@ -1,0 +1,62 @@
+package com.zensar;
+
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Graphics;
+
+public class CircleAnimation extends Frame implements Runnable {
+	private Thread t1;
+	private int r,x=100;
+	
+	
+	public CircleAnimation() {
+		super();
+		t1=new Thread(this,"a");
+		r=5;
+	}
+
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while(true)
+		{
+			if(Thread.currentThread()==t1)
+			{
+				x++;
+				if(x==this.getWidth())
+				{
+					x=0;
+				}
+				try {
+					Thread.sleep(30);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			else if(Thread.currentThread()==t2) {
+				x--;
+				if(x==0)
+				{
+					x=this.getWidth();
+				}
+				try {
+					Thread.sleep(30);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			repaint();
+		}
+		
+	}
+	public void paint(Graphics g) 
+	{
+		g.setColor(Color.RED);
+		 g.fillOval(x, 100, 100, 100);
+	}
+	
+
+}

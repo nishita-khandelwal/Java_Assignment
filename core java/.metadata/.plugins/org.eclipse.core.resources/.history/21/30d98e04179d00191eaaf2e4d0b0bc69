@@ -1,0 +1,11 @@
+package com.zensar;
+
+public class Swapping<G> {
+	public void swap(G a, G b) {
+		G temp;
+		temp=a;
+		a=b;
+		b=temp;
+		System.out.println("value of a is "+a+" value of b is "+b);
+	}
+}

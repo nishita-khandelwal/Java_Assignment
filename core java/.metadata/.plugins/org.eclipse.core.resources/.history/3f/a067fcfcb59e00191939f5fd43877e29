@@ -1,0 +1,12 @@
+package com.zensar;
+
+public class CircleAnimation implements Runnable {
+	private Thread t1,t2;
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

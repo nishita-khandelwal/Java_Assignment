@@ -1,0 +1,22 @@
+package com.zensar;
+
+import java.util.Scanner;
+
+public class Student {
+	private int rollno;
+	private String name;
+	private double dob;
+	
+	
+	public Student() {
+		super();
+	}
+	public Student(int rollno, String name, double dob) {
+		super();
+		this.rollno = rollno;
+		this.name = name;
+		this.dob = dob;
+	}
+	
+
+}

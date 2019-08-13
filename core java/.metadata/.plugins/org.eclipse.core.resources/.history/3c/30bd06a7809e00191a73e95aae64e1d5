@@ -1,0 +1,38 @@
+package day7;
+
+public class TestT implements Runnable {
+
+	private Thread t1,t2;
+	
+	public TestT() {
+		super();
+		t1=new Thread(this,"Hello");
+		t2=new Thread(this,"Hii");
+		t1.start();
+		t2.start();
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		int i;
+		for(i=0;i<100;i++)
+		{
+			if(Thread.currentThread()==t1)
+			{
+				System.out.println("Hello");
+			}
+			if(Thread.currentThread()==t2)
+			{
+				System.out.println("Hiiii");
+			}
+		}
+	}
+		
+}
+public class TestOne
+{
+	public static void main(String args[]) {
+		
+	}
+}

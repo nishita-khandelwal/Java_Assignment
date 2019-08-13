@@ -1,0 +1,28 @@
+package com.zensar;
+
+import java.util.Scanner;
+import java.util.Set;
+
+public class Student {
+	private int rollno;
+	private String name;
+	private double percentage;
+	private Set<String> skillset;
+	
+	
+	public Student() {
+		super();
+	}
+	public Student(int rollno, String name, double percentage, Set<String> skillset) {
+		super();
+		this.rollno = rollno;
+		this.name = name;
+		this.percentage = percentage;
+		this.skillset = skillset;
+	}
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + ", percentage=" + percentage + ", skillset=" + skillset
+				+ "]";
+	} 
+}

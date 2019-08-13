@@ -1,0 +1,19 @@
+package com.zensar;
+
+public class ExternalStudent extends Student {
+	private String institute;
+	private char grade;
+	public ExternalStudent() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public ExternalStudent(int rollno, String name,String dob,String institute,char grade) {
+		super(rollno, name, dob);
+		// TODO Auto-generated constructor stub
+		 this.institute=institute;
+		 this.grade=grade;
+	}
+	
+	
+
+}

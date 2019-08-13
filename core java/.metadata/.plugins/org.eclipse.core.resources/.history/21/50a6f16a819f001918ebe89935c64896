@@ -1,0 +1,85 @@
+package com.zensar;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.HeadlessException;
+
+
+class MovingCircle extends Frame implements Runnable
+{
+	private int xg,xb;
+	private Thread t1,t2;
+	public MovingCircle() throws HeadlessException {
+		super();
+		xg=xb=100;
+		
+		t1=new Thread(this,"GREEN");
+		t2=new Thread(this,"BLUE");
+		t1.start();
+		t2.start();
+		
+	}
+
+	public void paint(Graphics g) {
+		g.setColor(Color.BLUE);
+		g.fillOval(xb, 300, 50, 50);
+		g.setColor(Color.GREEN);
+		g.fillOval(xg, 200, 50, 50);
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while (true) {
+			if(Thread.currentThread()==t1)
+			{
+				synchronized (this) {
+				xb++;
+				if(xb==this.getWidth()-50)
+				{
+					
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				}
+				try {
+					Thread.sleep(20);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			else if (Thread.currentThread()==t2) 
+			{
+				xg--;
+				synchronized (this) {
+				if(xg==this.getWidth()-50)
+				{
+						notify();	
+				}}
+				try {
+					Thread.sleep(40);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+			repaint();
+		}
+		
+	}
+}
+
+public class CircleDemo {
+	public static void main(String[] args) {
+		MovingCircle movingCircle=new MovingCircle();
+		movingCircle.setSize(500, 500);
+		movingCircle.setVisible(true);
+		System.out.println("Test");
+	}
+}

@@ -1,0 +1,24 @@
+package com.zensar;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class UtilityLi {
+	private ArrayList<StudentTwo> list=new ArrayList<>();
+	
+	public void createList(StudentTwo s) 
+	{
+		list.add(s);
+	}
+	public void printList() 
+	{
+		Iterator<StudentTwo> iterator=list.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next()+" "+iterator.toString());
+	}
+	}
+
+}
+public class UtilityList
+{
+		
+}

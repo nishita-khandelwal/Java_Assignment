@@ -1,0 +1,100 @@
+package com.zensar;
+
+import java.util.Scanner;
+
+class OverLimit extends Exception {
+	public OverLimit()
+	{
+		super();
+	}
+}
+class InsufficientBalance extends Exception{
+	public InsufficientBalance()
+	{
+		super();
+	}
+}
+
+
+class AccountDetails {
+	
+	private static double balance;
+	
+	public AccountDetails() {
+		super();
+	}
+	public AccountDetails(double balance) {
+		super();
+		this.balance = balance;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	@Override
+	public String toString() {
+		return "AccountDetails [balance=" + balance + "]";
+	}
+	public double withdraw(double amount) throws InsufficientBalance  {
+		if(amount<balance)
+		{
+			throw new InsufficientBalance();
+		}
+		balance-=amount;
+		return amount;
+	}
+	public void deposite(double amount) throws OverLimit{
+		if(amount>15000)
+		{
+			throw new OverLimit();
+		}
+		else
+		balance+=amount;
+	}
+}
+public class Account
+{
+	public static void main(String args[]) 
+	{
+		Scanner scanner=new Scanner(System.in);
+		int ch;
+		System.out.println("Enter the balance");
+				double balance=scanner.nextDouble();
+		AccountDetails accountDetails=new AccountDetails(balance);
+		
+		while(true)
+		{
+			System.out.println("Choose an option");
+			System.out.println("Choose 1 for inserting");
+			System.out.println("Choose 2 for Updating");
+			System.out.println("Choose 3 for displaying");
+			System.out.println("Choose 4 to exit");
+			ch=scanner.nextInt();
+		  switch (ch) 
+		  {
+			case 1:
+			{
+				String temp= " ";
+				String temp1="";
+				double temp2=0;
+				System.out.println("Enter registration number,vehicle name and vehicle cost");
+				temp=scanner.next();
+				temp1= scanner.next();
+				temp2=scanner.nextDouble();
+				
+				Vehicle vehicle=new Vehicle(temp,temp1,temp2);
+				list.add(vehicle);
+				break;
+			}
+			case 2:
+			{
+				break;
+			}
+			}
+		
+		
+	}
+}

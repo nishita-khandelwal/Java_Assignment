@@ -1,0 +1,10 @@
+import com.zensar.Employee;
+
+public class Client {
+	void printObjects(Employee e)
+	{
+		System.out.println(e.getBasicSalary());
+		e.display();
+		
+	}
+}

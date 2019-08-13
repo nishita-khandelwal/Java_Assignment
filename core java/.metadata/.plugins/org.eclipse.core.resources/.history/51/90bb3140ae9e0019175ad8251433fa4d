@@ -1,0 +1,39 @@
+//multithreding
+package day7;
+
+class ThreadDemo extends Thread
+{
+		public void run() 
+		{
+			int i=0;
+			for (i = 0; i<=2; i++) {
+				try {
+					Thread.sleep(120);
+				} catch (Exception e) {	}
+				System.out.println("hello....");
+			}
+		}
+}
+class ThreadDemo1 extends Thread
+{
+		public void run() 
+		{
+			int i=0;
+			for (i = 0; i<=2; i++) {
+				try {
+					Thread.sleep(120);
+				} catch (Exception e) {	}
+				
+				//System.out.println("hiiii....");
+			}
+			}
+}
+public class Test {
+	public static void main(String args[]) {
+		ThreadDemo threadDemo=new ThreadDemo();
+		ThreadDemo1 threadDemo2=new ThreadDemo1();
+		threadDemo.start();
+		threadDemo1.start();
+	}
+
+}

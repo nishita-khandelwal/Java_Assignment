@@ -1,0 +1,50 @@
+package com.zensar;
+
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Graphics;
+class Test extends Frame implements Runnable {
+	private Thread t1;
+	private int d,x,y;
+	
+	
+	public Test() {
+		super();
+		t1=new Thread(this,"a");
+		x=50;
+		y=70;
+		d=50;
+		t1.start();
+	}
+
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while(true)
+		{
+			 if (d <= 90)
+			 {
+		         d = d + 10;		
+			 }
+				repaint();
+			}
+		}
+	public void paint(Graphics g) 
+	{
+		super.paint(g);
+		 g.setColor(Color.RED);
+		 g.fillOval(x,y, 100, 100);
+		 g.setColor(Color.black);
+		 g.drawOval(x, y, d, d);
+
+	}
+}
+public class CircleAnimation 
+{
+	public static void main(String args[]) {
+		Test test=new Test();
+		test.setVisible(true);
+		test.setSize(400,400);
+		System.out.println("Test");
+}}

@@ -1,0 +1,13 @@
+package com.zensar;
+
+public class CktPlayer implements Printable  {
+	
+	private String name;
+	private int run;
+	@Override
+	public void printDetails() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

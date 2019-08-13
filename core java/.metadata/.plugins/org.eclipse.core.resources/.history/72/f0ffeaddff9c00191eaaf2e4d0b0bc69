@@ -1,0 +1,23 @@
+package dayfive;
+import java.util.*;
+public class CollectionExample {
+	public static void main(String args[]) {
+	Vector<Integer> vector=new Vector<>();
+	vector.add(12);
+	System.out.println(vector.size()+" "+vector.capacity());
+	vector.add(34);
+	System.out.println(vector.size()+" "+vector.capacity());
+	vector.add(4653);
+	System.out.println(vector.size()+" "+vector.capacity());
+	vector.add(876);
+	vector.add(4344);
+	vector.add(433);
+	vector.add(765);
+	vector.add(5254);
+	vector.add(654656);
+	vector.add(43536);
+	System.out.println(vector.size()+" "+vector.capacity());
+	vector.add(536);
+	System.out.println(vector.size()+" "+vector.capacity());
+	}
+}

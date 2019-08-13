@@ -1,0 +1,19 @@
+package dayeight;
+
+import java.awt.Frame;
+import java.awt.Graphics;
+
+class MovingCircle extends Frame
+{
+	public void paint(Graphics g) {
+		
+	}
+}
+
+public class Test {
+	public static void main(String[] args) {
+		MovingCircle movingCircle=new MovingCircle();
+		movingCircle.setSize(400, 400);
+		movingCircle.setVisible(true);
+	}
+}

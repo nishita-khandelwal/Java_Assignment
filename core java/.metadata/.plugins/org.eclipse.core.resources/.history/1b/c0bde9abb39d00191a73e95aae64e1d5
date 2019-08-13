@@ -1,0 +1,17 @@
+package daysix;
+
+import java.util.HashSet;
+import java.util.Set;
+
+//set:- collection of unique elements 
+public class Test {
+ public static void main(String args[]) {
+	Set<Integer> set=new HashSet<>();
+	set.add(12);
+	set.add(31123);
+	set.add(812);
+	set.add(43);
+	set.add(82);
+	set.add(72);
+}
+}

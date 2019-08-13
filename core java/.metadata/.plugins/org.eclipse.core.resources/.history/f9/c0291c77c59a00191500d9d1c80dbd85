@@ -1,0 +1,8 @@
+package com.zensar;
+
+public class EmployeeTwo {
+	private int empid;
+	private String name;
+	private double basicSalary;
+
+}

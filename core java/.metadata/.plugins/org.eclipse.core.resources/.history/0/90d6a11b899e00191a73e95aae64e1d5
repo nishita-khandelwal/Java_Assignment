@@ -1,0 +1,11 @@
+package com.zensar;
+
+public class Account {
+	private double balance;
+	public void withdraw() {
+		
+	}
+	public void deposite() {
+		
+	}
+}

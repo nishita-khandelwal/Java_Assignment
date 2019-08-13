@@ -1,0 +1,13 @@
+package com.zensar;
+
+public class FtPlayer implements Printable {
+
+	private String name;
+	private int goals;
+	@Override
+	public void printDetails() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

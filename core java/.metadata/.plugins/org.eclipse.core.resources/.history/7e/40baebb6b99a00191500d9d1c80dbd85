@@ -1,0 +1,8 @@
+package com.zensar.pack2;
+
+public class Batch {
+	
+	private String courseName;
+	private int batchStregth;
+
+}

@@ -1,0 +1,25 @@
+package com.zensar;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+class UtilityLi {
+	private List<Student> list; 
+	public UtilityLi() {
+		super();
+	}
+	public void createList(Student s) 
+	{
+		System.out.println("Enter values of rollno,name,percentage and skill set");
+		list.add(s);
+	}
+	public void printList() 
+	{
+		Iterator<Student> iterator=list.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next()+" "+iterator.toString());
+	}
+	}
+}

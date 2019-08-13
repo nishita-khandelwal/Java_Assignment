@@ -1,0 +1,13 @@
+package com.zensar;
+import java.util.ArrayList;
+
+public class UtilityList {
+	private ArrayList<StudentTwo> list=new ArrayList<>();
+	
+	public void createList(StudentTwo s) 
+	{
+		list.add(s);
+	}
+	
+
+}

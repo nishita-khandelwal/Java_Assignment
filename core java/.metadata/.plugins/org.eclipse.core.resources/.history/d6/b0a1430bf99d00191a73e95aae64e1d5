@@ -1,0 +1,9 @@
+package com.zensar;
+
+import java.util.Map;
+
+public class UtilityReport {
+	private Map<String, Double> map;
+	
+
+}

@@ -1,0 +1,10 @@
+import com.zensar.polydemo.Employee;
+
+public class Test {
+	public static void main(String args[])
+	{
+		Employee sl=new Employee();
+		s1.toString();
+	}
+
+}

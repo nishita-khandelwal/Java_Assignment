@@ -1,0 +1,32 @@
+package day7;
+
+public class TestOne implements Runnable {
+
+	private Thread t1,t2;
+	
+	public TestOne() {
+		super();
+		t1=new Thread(this,"Hello");
+		t2=new Thread(this,"Hii");
+		t1.start();
+		t2.start();
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		int i;
+		for(i=hashCode();i<100;i++)
+		{
+			if(Thread.currentThread()==t1)
+			{
+				System.out.println("Hello");
+			}
+			if(Thread.currentThread()==t2)
+			{
+				System.out.println("Hiiii");
+			}
+		}
+	}
+		
+}

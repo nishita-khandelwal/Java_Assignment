@@ -1,0 +1,50 @@
+package com.zensar;
+
+public class Product implements Cloneable {
+	private int product_id;
+	private String product_name;
+	private double cost_of_product;
+	
+	
+	public Product() {
+		super();
+	}
+	public Product(int product_id, String product_name, double cost_of_product) {
+		super();
+		this.product_id = product_id;
+		this.product_name = product_name;
+		this.cost_of_product = cost_of_product;
+	} 
+	public Object clone() throws CloneNotSupportedException
+	{
+		return super.clone();
+	}
+	
+	@Override
+	public String toString() {
+		return "Product [product_id=" + product_id + ", product_name=" + product_name + ", cost_of_product="
+				+ cost_of_product + "]";
+	}
+	/*public boolean equals(Object obj) {
+		Product temp=(Product)obj;
+		if(product_id=temp.product_id && product_name=temp.equals(product_name))
+			return true;
+		else
+			return false;
+	}*/
+	public static void main(String args[]) 
+	{
+		try
+		{
+		Product product=new Product(111, "Cooler", 11245);
+		Product product2=(Product)product.clone();
+		System.out.println(product.product_id+" "+product.product_name+" "+product.cost_of_product);
+		System.out.println(product2.product_id+" "+product2.product_name+" "+product2.cost_of_product);
+		}
+		catch(CloneNotSupportedException c){}
+
+	}
+	
+	
+
+}

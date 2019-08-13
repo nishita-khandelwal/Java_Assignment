@@ -1,0 +1,66 @@
+package com.zensar;
+
+import java.util.Scanner;
+
+class OverLimit extends Exception {
+	public OverLimit()
+	{
+		super();
+	}
+}
+class InsufficientBalance extends Exception{
+	public InsufficientBalance()
+	{
+		super();
+	}
+}
+
+
+class AccountDetails {
+	
+	private static double balance;
+	
+	public AccountDetails() {
+		super();
+	}
+	public AccountDetails(double balance) {
+		super();
+		this.balance = balance;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	@Override
+	public String toString() {
+		return "AccountDetails [balance=" + balance + "]";
+	}
+	public double withdraw(double amount) throws InsufficientBalance  {
+		if(amount<balance)
+		{
+			throw new InsufficientBalance();
+		}
+		balance-=amount;
+		return amount;
+	}
+	public void deposite(double amount) throws OverLimit{
+		if(amount>15000)
+		{
+			throw new OverLimit();
+		}
+		else
+		balance+=amount;
+	}
+}
+public class Account
+{
+	public static void main(String args[]) 
+	{
+		Scanner scanner=new Scanner(System.in);
+				double balance=scanner.nextDouble();
+		AccountDetails accountDetails=new AccountDetails(balance);
+	}
+}

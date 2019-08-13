@@ -1,0 +1,96 @@
+//set:- collection of unique elements
+
+package daysix;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
+
+class Student
+{
+	private int rollno;
+	private String name;
+	private double percentage;
+	
+	
+	public Student() {
+		super();
+	}
+	public Student(int rollno, String name, double percentage) {
+		super();
+		this.rollno = rollno;
+		this.name = name;
+		this.percentage = percentage;
+	}
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", name=" + name + ", percentage=" + percentage + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(percentage);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + rollno;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (Double.doubleToLongBits(percentage) != Double.doubleToLongBits(other.percentage))
+			return false;
+		if (rollno != other.rollno)
+			return false;
+		return true;
+	}
+	
+	
+}
+
+
+ 
+public class Test {
+ public static void main(String args[]) {
+	
+	 Map<Integer,Student> map=new HashMap<>();
+	 map.put(1,new Student(111,"Akshay",34));
+	 map.put(1,new Student(111,"Akshay",34));
+	 map.put(1,new Student(111,"Akshay",34));
+	 for (Integer i : (map.keySet()) {
+			System.out.println(i);
+	 }
+	 for (Student student : (map).values()) {
+			System.out.println(student);
+	 }
+	 
+	 
+	 
+	 
+	 /*Set<Student> set=new LinkedHashSet<>();
+	set.add(new Student(111,"Akshay",34));
+	set.add(new Student(111,"Akshay",34));
+	set.add(new Student(112,"Sam",78));
+	set.add(new Student(113,"Tom",84));
+	
+	for (Student student : set) {
+		System.out.println(student);
+	}*/
+	 
+	 
+}
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+import com.zensar.Address;
+import com.zensar.Student;
+
+//main methode for que 5
+public class TestTwo {
+	
+
+	public static void main(String args[])
+	{
+		Scanner scanner=new Scanner(System.in);
+		String strName1= scanner.next();
+		int roll=scanner.nextInt();
+		Student student=new Student();
+		Address address=new Address();
+		
+	}
+}

@@ -1,0 +1,37 @@
+package com.zensar;
+
+public class LinearQueue<G> 
+{
+
+		private G [] arr;
+		private int size, front, rear;
+		
+		public LinearQueue() {
+			super();
+			   size=5;
+			   arr=(G[]) new Object[size];
+			   rear=-1;
+			   front=-1;
+		}
+	/*	public LinearQueue(G[] arr, int size, int front, int rear) {
+			super();
+			this.arr = arr;
+			this.size = size;
+			this.front = front;
+			this.rear = rear;
+		}*/
+		 public boolean isFull() 
+		   {
+			   return front==size-1;
+		   }
+		   public boolean isEmpty() 
+		   {
+			   return rear==-1;
+		   }
+		   
+		public G insert(G data) 
+		{
+			return  arr[++front]=data;
+		}
+		
+}

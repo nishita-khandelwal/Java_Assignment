@@ -1,0 +1,8 @@
+package com.zensar;
+
+public class Vehicle {
+	private String vehicle_registration_number;
+	private String vehicle_name;
+	private double cost_of_Vehicle;
+
+}

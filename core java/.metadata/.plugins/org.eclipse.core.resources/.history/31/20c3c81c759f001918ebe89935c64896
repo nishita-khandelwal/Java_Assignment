@@ -1,0 +1,16 @@
+package com.zensar;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MultiplyTest {
+
+	@Test
+	void test() {
+		//fail("Not yet implemented");
+		Calculator calculator=new Calculator();
+		int result=calculator.multiply(35, 75);
+		assertEquals(result, 90);
+	}
+
+}

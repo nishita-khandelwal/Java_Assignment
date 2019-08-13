@@ -1,0 +1,14 @@
+package com.zensar;
+
+import static org.junit.Assert.assertEquals;
+
+class MultiplyTest {
+
+	void test() {
+		//fail("Not yet implemented");
+		Calculator calculator=new Calculator();
+		int result=calculator.multiply(35, 75);
+		assertEquals(result, 90);
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.zensar;
+
+public class UnderFlowException extends Exception{
+	public UnderFlowException()
+	{
+		super();
+	}
+
+}

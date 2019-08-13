@@ -1,0 +1,24 @@
+package com.zensar;
+
+public class Manager extends EmployeeTwo
+{
+	EmployeeTwo employee=new EmployeeTwo();
+	private double bs=employee.getBasicSalary();
+	private double pa=0.08*bs;
+	private double fa=0.12*bs;
+	private double oa=0.04*bs;
+	private double gs;
+	public Manager() {
+		super();
+	}
+	public void GrossSalary() 
+	{
+		gs=bs+pa+fa+oa;
+	}
+	public void display()
+	{
+		System.out.println("Gross Salary of manager is"+gs);
+	}
+	
+	
+}

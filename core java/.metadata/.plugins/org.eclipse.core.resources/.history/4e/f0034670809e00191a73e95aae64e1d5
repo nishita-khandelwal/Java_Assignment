@@ -1,0 +1,21 @@
+package day7;
+
+public class TestOne implements Runnable {
+
+	private Thread t1,t2;
+	
+	public TestOne() {
+		super();
+		t1=new Thread(this,"Hello");
+		t2=new Thread(this,"Hii");
+		t1.start();
+		t2.start();
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+		
+}

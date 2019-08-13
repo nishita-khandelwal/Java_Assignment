@@ -1,0 +1,24 @@
+package com.zensar;
+
+public class Employee {
+	private int empid;
+	private String name;
+	private double basicSalary;
+	
+	
+	public Employee() {
+		super();
+	}
+	public Employee(int empid, String name, double basicSalary) {
+		super();
+		this.empid = empid;
+		this.name = name;
+		this.basicSalary = basicSalary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empid=" + empid + ", name=" + name + ", basicSalary=" + basicSalary + "]";
+	}
+	
+}

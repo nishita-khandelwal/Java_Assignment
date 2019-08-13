@@ -1,0 +1,31 @@
+package com.zensar;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+class UtilityLi {
+	private ArrayList<StudentTwo> list=new ArrayList<>();
+	
+	public void createList(StudentTwo s) 
+	{
+		list.add(s);
+	}
+	public void printList() 
+	{
+		Iterator<StudentTwo> iterator=list.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next()+" "+iterator.toString());
+	}
+	}
+
+}
+public class UtilityList
+{
+	public static void main(String args[]) {
+		
+	
+		Scanner scanner=new Scanner(System.in);
+		UtilityLi utilityLi=new UtilityLi();
+		StudentTwo studentTwo=new StudentTwo();
+	}	
+}

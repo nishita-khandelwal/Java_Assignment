@@ -1,0 +1,11 @@
+package com.zensar;
+
+public class Manager extends EmployeeTwo
+{
+	EmployeeTwo employee=new EmployeeTwo();
+	private int bs=employee.ge
+	 Petrol Allowance: 8% of basic salary
+		b. Food Allowance: 12% of basic salary
+		c. Other Allowance: 4% of basic salary
+
+}

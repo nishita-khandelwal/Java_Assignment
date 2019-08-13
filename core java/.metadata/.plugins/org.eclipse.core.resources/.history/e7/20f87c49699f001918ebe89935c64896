@@ -1,0 +1,26 @@
+package dayeight;
+
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Graphics;
+
+class MovingCircle extends Frame
+{
+	public void paint(Graphics g) {
+		g.setColor(Color.RED);
+		g.fillOval(100, 100, 50, 50);
+		g.setColor(Color.GREEN);
+		g.fillOval(100, 250, 50, 50);
+		g.setColor(Color.BLUE);
+		g.fillOval(100, 400, 50, 50);
+	}
+}
+
+public class Test {
+	public static void main(String[] args) {
+		MovingCircle movingCircle=new MovingCircle();
+		movingCircle.setSize(400, 400);
+		movingCircle.setVisible(true);
+		System.out.println("Test");
+	}
+}

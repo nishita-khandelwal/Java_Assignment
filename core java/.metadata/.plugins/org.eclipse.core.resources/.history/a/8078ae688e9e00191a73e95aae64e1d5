@@ -1,0 +1,44 @@
+package com.zensar;
+class OverLimit extends Exception {
+	public OverFlowException()
+	{
+		super();
+	}
+
+}
+class UnderFlowException extends Exception{
+	public UnderFlowException()
+	{
+		super();
+	}
+
+}
+public class Account {
+	private double balance;
+	
+	public Account() {
+		super();
+	}
+	public Account(double balance) {
+		super();
+		this.balance = balance;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	@Override
+	public String toString() {
+		return "Account [balance=" + balance + "]";
+	}
+	public double withdraw(double amount) {
+		balance-=amount;
+		return amount;
+	}
+	public void deposite(double amount) {
+		balance+=amount;
+	}
+}

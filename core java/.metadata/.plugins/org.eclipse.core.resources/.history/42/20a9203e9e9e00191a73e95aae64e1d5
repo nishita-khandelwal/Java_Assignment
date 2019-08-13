@@ -1,0 +1,16 @@
+package com.zensar;
+
+import java.util.Map;
+
+public class UtilityReport {
+	private String temp;
+	private double temp1;
+	private Map<String, Double> map;
+	Student student=new Student();
+	public void showReport() {
+		temp=student.getName();
+		temp1=student.getPercentage();
+		
+	}
+
+}

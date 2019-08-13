@@ -1,0 +1,12 @@
+import com.zensar.pack1.Student;
+import com.zensar.pack2.Batch;
+
+public class Test {
+	public static void main(String args[])
+	{
+		Student student=new Student();
+		Batch batch=new Batch();
+		
+	}
+
+}

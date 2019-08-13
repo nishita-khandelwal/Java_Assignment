@@ -1,0 +1,13 @@
+package day7;
+
+import java.awt.Frame;
+
+public class TestThree {
+	public static void main(String args[]) {
+		Frame frame=new Frame();
+		frame.setSize(400,400);
+		frame.setVisible(true);
+		System.out.println("TestThree");
+	}
+
+}

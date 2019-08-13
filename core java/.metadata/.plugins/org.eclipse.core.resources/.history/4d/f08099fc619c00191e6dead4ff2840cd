@@ -1,0 +1,10 @@
+package com.zensar;
+
+public class Product implements Cloneable {
+	private int product_id;
+	private String product_name;
+	private double cost_of_product; 
+	
+	
+
+}

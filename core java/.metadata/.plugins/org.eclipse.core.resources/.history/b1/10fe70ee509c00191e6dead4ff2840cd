@@ -1,0 +1,7 @@
+package com.zensar;
+
+public class InternalStudent extends Student {
+	private String university;
+	private double percentage;
+
+}

@@ -1,0 +1,77 @@
+package day7;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.HeadlessException;
+
+class MovingString extends Frame implements Runnable
+{
+	
+	private Thread t1,t2;
+	private int x1,x2;
+	
+	
+	public MovingString() throws HeadlessException {
+		super();
+		x1=100;
+		x2=200;
+		t1=new Thread(this,"Zensar");
+		t2=new Thread(this,"Java");
+	}
+
+	public void paint(Graphics g) 
+	{
+		g.setColor(Color.RED);
+		g.setFont(new Font("verdana",24,24));
+		
+		g.drawString("Zensar",x1,100);
+		g.setColor(Color.blue);
+		g.drawString("Java",x2,200);
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while(true)
+		{
+			if(Thread.currentThread()==t1)
+			{
+				x1++;
+				if(x1==this.getWidth())
+				{
+					x1=0;
+				}
+				try {
+					Thread.sleep(30);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			else if(Thread.currentThread()==t2) {
+				x2--;
+				if(x2==0)
+				{
+					x2=this.getWidth();
+				}
+				try {
+					Thread.sleep(30);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}repaint();
+		}
+	}
+}
+public class TestThree {
+	public static void main(String args[]) {
+		MovingString movingString=new MovingString();
+		movingString.setSize(400,400);
+		movingString.setVisible(true);
+		System.out.println("TestThree");
+	}
+
+}

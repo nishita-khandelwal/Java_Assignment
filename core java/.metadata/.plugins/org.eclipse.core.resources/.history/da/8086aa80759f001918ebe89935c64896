@@ -1,0 +1,12 @@
+package com.zensar;
+import static org.junit.Assert.assertEquals;
+
+class AddTest {
+	void test() {
+		//fail("Not yet implemented");
+		Calculator calculator=new Calculator();
+		int result=calculator.add(35, 75);
+		assertEquals(result, 90);
+	}
+
+}

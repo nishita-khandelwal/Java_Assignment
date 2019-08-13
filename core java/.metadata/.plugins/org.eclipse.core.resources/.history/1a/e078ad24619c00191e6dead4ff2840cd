@@ -1,0 +1,8 @@
+package com.zensar;
+
+public class Product {
+	private int product_id;
+	private String product_name;
+	private double cost_of_product; 
+
+}

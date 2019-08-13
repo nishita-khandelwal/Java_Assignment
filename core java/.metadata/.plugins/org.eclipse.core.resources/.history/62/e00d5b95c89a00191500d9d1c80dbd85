@@ -1,0 +1,23 @@
+package com.zensar;
+
+public class MarketingExecutive extends Employee 
+{
+	private double kmTravelled=0;
+	private double tour_allowance=5*kmTravelled;
+	private double telephone_allowance=2000;
+	
+	
+	public MarketingExecutive() {
+		super();
+	}
+	public MarketingExecutive(double kmTravelled) {
+		super();
+		this.kmTravelled = kmTravelled;
+	}
+	public double getKmTravelled() {
+		return kmTravelled;
+	}
+	public void setKmTravelled(double kmTravelled) {
+		this.kmTravelled = kmTravelled;
+	}
+}

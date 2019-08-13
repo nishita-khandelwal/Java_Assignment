@@ -1,0 +1,16 @@
+package com.zensar;
+
+public class SalesPerson extends WageEmployee{
+	private int noOfItem;
+	private int commision;
+	
+	
+	public SalesPerson() {
+		super();
+	}
+	public SalesPerson(int noOfItem, int commision) {
+		super();
+		this.noOfItem = noOfItem;
+		this.commision = commision;
+	}
+}

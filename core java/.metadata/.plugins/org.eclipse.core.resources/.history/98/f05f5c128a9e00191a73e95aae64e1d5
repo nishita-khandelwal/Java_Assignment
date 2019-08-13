@@ -1,0 +1,14 @@
+package day7;
+
+import java.awt.Frame;
+
+class MovingString extends Frame{}
+public class TestThree {
+	public static void main(String args[]) {
+		MovingString movingString=new MovingString();
+		movingString.setSize(400,400);
+		movingString.setVisible(true);
+		System.out.println("TestThree");
+	}
+
+}

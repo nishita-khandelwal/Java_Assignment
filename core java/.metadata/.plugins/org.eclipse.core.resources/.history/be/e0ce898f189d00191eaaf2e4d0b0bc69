@@ -1,0 +1,26 @@
+package com.zensar;
+
+public class Swapping<G> {
+	public void swap(G a, G b) {
+		G temp;
+		temp=a;
+		a=b;
+		b=temp;
+		System.out.println("value of a is "+a+" value of b is "+b);
+	}
+	public static void main(String args[]) 
+	{
+		Swapping<Employee> swapping=new Swapping<>();
+		Employee employee=new Employee(111,"Akshay",1000);
+		Employee employee2=new Employee(112,"Pokharna",5432);
+		System.out.println("Before swapping");
+		employee.toString();
+		employee2.toString();
+		swapping.swap(employee,employee2);
+		System.out.println("After swapping");
+		employee.toString();
+		employee2.toString();
+		
+	}
+
+}

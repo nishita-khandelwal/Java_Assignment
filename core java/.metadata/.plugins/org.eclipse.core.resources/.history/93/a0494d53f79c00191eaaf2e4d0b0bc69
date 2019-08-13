@@ -1,0 +1,20 @@
+//coleection generics
+package dayfive;
+
+public class Test<G> {
+	
+	public void swap(G a, G b) {
+		G temp;
+		temp=a;
+		a=b;
+		b=temp;
+		System.out.println("value of a is "+a+" value of b is "+b);
+	}
+	public static void main(String args[]) {
+		Test<String> test=new Test<String>();
+		Test<Integer> test2=new Test<>();
+		test.swap("Jain", "Akshay");
+		test2.swap(127, 345);
+	}
+
+}

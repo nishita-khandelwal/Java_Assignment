@@ -1,0 +1,29 @@
+package com.zensar;
+
+class Main {
+	private int pid;
+	private String pname;
+	private double pcost;
+	private static int cnt;
+	
+	
+	public Main() {
+		super();
+		cnt++;
+	}
+	public Main(int pid, String pname, double pcost) {
+		super();
+		this.pid = pid;
+		this.pname = pname;
+		this.pcost = pcost;
+		cnt++;
+	}
+	public static void showCut()
+	{
+		System.out.println("Number of objects are"+cnt);
+	}
+	
+
+}
+public class Main
+{}

@@ -1,0 +1,23 @@
+package com.zensar;
+
+import java.util.List;
+import java.util.Map;
+
+public class UtilityReport {
+	private String temp;
+	private double temp1;
+	private Map<String, Double> map=new HashMap<>();
+
+	
+	public void showReport(List<Student> list) 
+	{
+		for(Student student:list)
+		{
+			 
+			 map.put(1,new Student(111,"Akshay",34));
+			System.out.println(student.getName());
+			
+		}
+	}
+
+}
